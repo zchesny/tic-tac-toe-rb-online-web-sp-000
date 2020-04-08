@@ -92,7 +92,7 @@ end
 def play(board)
   board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   until over?(board)
-    turn(board)
+    board = turn(board)
   end
   if won?(board)
     "Congratulations #{winner(board)}!"
