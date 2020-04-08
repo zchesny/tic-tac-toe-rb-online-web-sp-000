@@ -30,6 +30,8 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
+def valid_move?()
+
 # Define won?, full?, draw?, over?, and winner below
 def won?(board)
   WIN_COMBINATIONS.detect do |combo|
