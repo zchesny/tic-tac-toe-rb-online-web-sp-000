@@ -95,7 +95,7 @@ def play(board)
     turn(board)
   end
   puts "HELLO here is the board"
-  display_board
+  display_board(board)
   if won?(board)
     puts "Congratulations #{winner(board)}!"
   elsif draw?(board)
