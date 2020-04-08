@@ -34,6 +34,20 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
+def turn_count(board)
+  turns = 0
+  board.each do |pos|
+    if pos == "X" || pos == "O"
+      turns += 1
+    end
+  end
+  return turns
+end
+
+def current_player(board)
+  turn_c = turn_count(board) % 2 == 0 ? "X" : "O"
+end
+
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -46,6 +60,7 @@ def turn(board)
     turn(board)
   end
 end
+
 
 # Define won?, full?, draw?, over?, and winner below
 def won?(board)
