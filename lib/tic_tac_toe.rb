@@ -30,7 +30,9 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-def valid_move?()
+def valid_move?(board, index)
+  !position_taken?(board, index) && index.between?(0,8)
+end
 
 # Define won?, full?, draw?, over?, and winner below
 def won?(board)
